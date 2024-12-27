@@ -1,23 +1,21 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "Header/Core/GameWindowManager.h"
+#include "Header/Event/EventManager.h"
+#include "Header/Core/GameLoop.h"
+
+using namespace Core;
+using namespace Eventmanager;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+	GameLoop* game_loop = new GameLoop();
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
+	game_loop->initialize();
+	while (game_loop->isGameRunning())
+	{
+		game_loop->pollEvent();
+		game_loop->update();
+		game_loop->render();
+	}
 }
