@@ -133,7 +133,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source\EventManager.cpp" />
+    <ClCompile Include="Source\GameLoop.cpp" />
+    <ClCompile Include="Source\GameWindowManager.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\EventManager.h" />
+    <ClInclude Include="Header\GameWindowManager.h" />
+    <ClInclude Include="Header\GameLoop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
