@@ -1,23 +1,23 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
+
+#include "D:\Unity Projects 2024\Co-Op Snake 2D\Pong-SFML\Assets\Header\Core\GameLoop.h"
+using namespace sf;
+using namespace Core;
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
 
-    while (window.isOpen())
+    GameLoop* game_loop_Manager = new GameLoop();
+    game_loop_Manager->initialize();
+
+    while (game_loop_Manager->isGameRunning())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
+        game_loop_Manager->pollEvent();
+        game_loop_Manager->Update();
+        game_loop_Manager->Render();
     }
+    
+    return 0;
+    
 }
