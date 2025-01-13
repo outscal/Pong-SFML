@@ -1,0 +1,28 @@
+#include "../../Header/Core/GameWindowManager.h"
+
+namespace Core {
+
+	void GameWindowManager::initialize() {
+		game_window = new RenderWindow();
+		createGameWindow();
+	}
+
+	void GameWindowManager::createGameWindow() {
+		game_window->create(
+			VideoMode::getDesktopMode(), game_title, Style::Fullscreen
+		);
+	}
+
+	bool GameWindowManager::isGameRunning() {
+		return game_window -> isOpen();
+	}
+
+	void GameWindowManager::render() {
+		game_window->clear(Color(200, 50, 50, 255));
+		game_window->display();
+	}
+
+	RenderWindow* GameWindowManager::getGameWindow() {
+		return game_window;
+	}
+}
