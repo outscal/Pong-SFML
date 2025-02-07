@@ -1,0 +1,20 @@
+#include "../../Header/Event/EventManager.h"
+
+namespace Event {
+	void EventManager::pollEvents(RenderWindow* game_window)
+	{
+		sf::Event event;
+		while (game_window->pollEvent(event))
+		{
+			if (isKeyPressed(sf::Keyboard::Escape)) 
+			{
+                game_window->close();
+			}
+		}
+	}
+	bool EventManager::isKeyPressed(sf::Keyboard::Key key)
+	{
+		// Detect if a specific key is pressed
+		return sf::Keyboard::isKeyPressed(key);
+	}
+}
