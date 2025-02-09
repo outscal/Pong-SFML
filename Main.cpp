@@ -1,8 +1,13 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include "../../Header/Core/GameWindowManager.h"
+#include "../../Header/Event/EventManager.h"
+
+using namespace Core;
+using namespace Event;
 
 int main()
 {
+    /*
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
@@ -19,5 +24,15 @@ int main()
         window.clear();
         window.draw(shape);
         window.display();
+    }
+    */
+    EventManager eventManager;
+    GameWindowManager gameWindowManager;
+    gameWindowManager.initialize();
+
+    while (gameWindowManager.isGameRunning())
+    {
+        eventManager.pollEvents(gameWindowManager.getGameWindow());
+        gameWindowManager.render();
     }
 }
