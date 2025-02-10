@@ -20,12 +20,14 @@ namespace Core {
 		return game_window->isOpen();
 	}
 
-	void GameWindowManager::render()
+	void GameWindowManager::clearGameWindow()
 	{
-		//implementation will be done later
-		game_window->clear(sf::Color(200, 50, 50, 255));
+		game_window->clear();
+	}
 
-		game_window->display();
+	void GameWindowManager::displayGameWindow()
+	{
+		game_window->display();//return game_window->display(), as given in course. not sure why.
 	}
 
 	RenderWindow* GameWindowManager::getGameWindow()
