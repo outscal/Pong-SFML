@@ -1,12 +1,13 @@
 #include "../../Header/Gameplay/GameplayManager.h"
 
 namespace Gameplay {
-	Gameplay::GameplayManager::GameplayManager()
+	GameplayManager::GameplayManager::GameplayManager(EventManager *manager)
 	{
+		event_manager = manager;
 		initialize();
 	}
 	
-	void Gameplay::GameplayManager::initialize()
+	void GameplayManager::GameplayManager::initialize()
 	{
 		ball = new Ball();
 		player1 = new Paddle(player1_position_x,player1_position_y);
@@ -14,6 +15,12 @@ namespace Gameplay {
 	}
 	void GameplayManager::update()
 	{
+		ball->update();
+
+		player1->update(event_manager->isKeyPressed(Keyboard::W),
+			event_manager->isKeyPressed(Keyboard::S));
+		player2->update(event_manager->isKeyPressed(Keyboard::Up),
+			event_manager->isKeyPressed(Keyboard::Down));
 	}
 
 	void GameplayManager::render(RenderWindow* game_window)
