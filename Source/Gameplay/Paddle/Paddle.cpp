@@ -3,11 +3,11 @@
 namespace Gameplay {
 	void Paddle::movePaddle(bool move_up_key_pressed, bool move_down_key_pressed)
 	{
-		if (move_up_key_pressed)
+		if (move_up_key_pressed && paddleSprite.getPosition().y > topBoundary)
 		{
 			paddleSprite.move(0, -paddle_speed);
 		}
-		if (move_down_key_pressed)
+		if (move_down_key_pressed  && paddleSprite.getPosition().y + paddleSprite.getSize().y < bottomBoundary)
 		{
 			paddleSprite.move(0, paddle_speed);
 		}
@@ -16,6 +16,10 @@ namespace Gameplay {
 	{
 		paddleSprite.setSize(sf::Vector2f(paddle_width, paddle_height));
 		paddleSprite.setPosition(position_x, position_y);
+	}
+	RectangleShape Paddle::getPaddleSprite()
+	{
+		return paddleSprite;
 	}
 	void Paddle::update(bool move_up_key_pressed, bool move_down_key_pressed)
 	{
