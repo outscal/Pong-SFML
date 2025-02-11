@@ -12,8 +12,8 @@ namespace Gameplay {
 		Texture pong_ball_texture;
 		const string texture_path = "Assets/Textures/Ball.png";
 		Sprite pong_ball_sprite;
-		const float scale_x = 0.2f;
-		const float scale_y = 0.2f;
+		const float scale_x = 0.1f;
+		const float scale_y = 0.1f;
 
 		const float position_x = 615.0f;
 		const float position_y = 335.0f;
