@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "/Users/MY PC/source/repos/Pong-SFML/Pong-SFML/Header/Core/GameWindowManager.h"
 
 int main()
 {
@@ -20,4 +21,16 @@ int main()
         window.draw(shape);
         window.display();
     }
+
+    //create window manager instance
+    Core::GameWindowManager gameWindowManager;
+
+    //initialize the window
+    gameWindowManager.initialize();
+
+    while (gameWindowManager.isGameRunning()) {
+        gameWindowManager.render();
+    }
+
+    return 0;
 }
