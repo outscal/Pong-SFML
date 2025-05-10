@@ -45,55 +45,67 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Gameplay\Boundary\Boundary.cpp">
+    <ClCompile Include="Assets\Source\Core\GameWindowManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Gameplay\Ball\Ball.cpp">
+    <ClCompile Include="Assets\Source\Core\GameLoop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Gameplay\Paddle\Paddle.cpp">
+    <ClCompile Include="Assets\Source\Core\Gameplay\Ball\Ball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Gameplay\GameplayManager.cpp">
+    <ClCompile Include="Assets\Source\Core\Gameplay\GameplayManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Event\EventManager.cpp">
+    <ClCompile Include="Assets\Source\Core\Gameplay\Paddle\Paddle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Utility\TimeService.cpp">
+    <ClCompile Include="Assets\Source\Event\EventManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\UI\UIService.cpp">
+    <ClCompile Include="Assets\Source\Core\Gameplay\Boundary\Boundary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\GameWindowManager.cpp">
+    <ClCompile Include="Assets\Source\Utility\TimeService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Source\UI\UIService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Source\Sound\SoundManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header\Gameplay\Ball\Ball.h">
-      <Filter>Header Files\Header\GamePlay\Ball</Filter>
+    <ClInclude Include="Assets\Header\Core\GameWindowManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Gameplay\Boundary\Boundary.h">
-      <Filter>Header Files\Header\GamePlay\Boundary</Filter>
+    <ClInclude Include="Assets\Header\Event\EventManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Event\EventManager.h">
-      <Filter>Header Files\Header\Events</Filter>
+    <ClInclude Include="Assets\Header\Core\GameLoop.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Gameplay\GameplayManager.h">
-      <Filter>Header Files\Header\GamePlay</Filter>
+    <ClInclude Include="Assets\Header\Gameplay\Ball\Ball.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Core\GameWindowManager.h">
-      <Filter>Header Files\Header\Core</Filter>
+    <ClInclude Include="Assets\Header\Gameplay\GameplayManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Gameplay\Paddle\Paddle.h">
-      <Filter>Header Files\Header\GamePlay\Paddle</Filter>
+    <ClInclude Include="Assets\Header\Gameplay\Paddle\Paddle.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Utility\TimeService.h">
-      <Filter>Header Files\Header\Utility</Filter>
+    <ClInclude Include="Assets\Header\Gameplay\Boundary\Boundary.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header\UI\UIService.h">
-      <Filter>Header Files\Header\UI</Filter>
+    <ClInclude Include="Assets\Header\Utility\TimeService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Header\UI\UIService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Header\Sound\SoundManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
